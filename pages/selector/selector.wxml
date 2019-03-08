@@ -1,0 +1,76 @@
+<!--pages/selector/selector.wxml-->
+<view class="section">
+  <view class="section__title">普通选择器</view>
+  <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">日期选择器</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">时间选择器</view>
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+      当前选择: {{time}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">多列选择器</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+    </view>
+  </picker>
+</view>
+
+<view class="section">
+  <view class="section__title">省市区</view>
+  <picker mode="region" value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+    <view class="picker">
+      当前选择: {{region}}
+    </view>
+  </picker>
+</view>
+
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+<view class="body-view">
+    <switch bindchange="switchChange" aria-label="开关"/>
+    <view hidden="{{hidden}}">显示与隐藏</view>
+</view>
+<navigator url="../fotter/fotter?test=1" bindtap="jump">跳转</navigator>
+
+
+
+
+<scroll-view class="container">
+  <view class="scrolltxt">
+    <view class="marquee_box">
+      <view class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+        <text>{{text}}</text>
+        <text style="margin-right:{{marquee_margin}}px;"></text>
+        <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>        
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<view class="marquee">
+    <view class="content">
+        <text>{{text}}</text>
+        <text>{{text}}</text>
+    </view>
+</view>

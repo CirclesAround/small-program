@@ -1,0 +1,5 @@
+<!--pages/component/component.wxml-->
+<view class="following">
+  <text class="following__list {{active==index?'cuurent':' '}}" wx:for="{{list}}" data-index="{{index}}" bindtap="change">{{item}}</text>
+</view>
+<text>{{test}}</text>

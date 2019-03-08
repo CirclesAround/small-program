@@ -1,0 +1,6 @@
+<!--pages/fotter/fotter.wxml-->
+<!-- <view class="following">
+  <text class="following__list {{active==index?'cuurent':' '}}" wx:for="{{list}}" data-index="{{index}}">{{item}}</text>
+</view> -->
+<component test="{{active}}" bindginseng="change"></component>
+<text>{{obtain}}</text>

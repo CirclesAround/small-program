@@ -1,0 +1,18 @@
+<!--component/footer/footer.wxml-->
+<view class="navbar">
+  <block wx:for="{{footer}}">
+    <navigator url="{{item.url}}" class="navbar__item {{current===index?'current':''}}" wx:if="{{index!==2}}" data-index="{{index}}" hover-class='none' bindtap="changeNavbar" open-type="redirect">
+      <image class="navbar-img" src="{{item.img}}" wx:if="{{current===index}}"></image>
+       <image class="navbar-img" src="{{item.isImg}}" wx:else></image> 
+      <text class="navbar-text">{{item.text}}</text>
+    </navigator>
+    <navigator class="navbar__item" wx:else  hover-class='none' open-type="redirect">
+      <image class="navbar-img" src="{{item.isImg}}"></image>
+      <image class="navbar-img avatar-bg" src="http://style1.lm720.com/skin/home_new/assets/images/footer/footer-bg.png">
+      </image>
+      <image class="navbar-img avatar-entry" src="http://style1.lm720.com/skin/home_new/assets/images/footer/footer-entry.png">
+      </image>
+      <text class="navbar-text">{{item.text}}</text>
+    </navigator>
+  </block>
+</view>

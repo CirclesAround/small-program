@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/clearance/clearance",
+    "pages/index/index",
+    "pages/selector/selector",
+    "pages/test/test",
+    "pages/logs/logs",
+    "pages/shuffling-vadeo/shuffling-vadeo",
+    "pages/fotter/fotter",
+    "pages/component/component",
+    "component/footer/footer"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "red",
+    "list": [
+      {
+        "pagePath": "pages/selector/selector",
+        "text": "首页",
+        "iconPath": "image/stop.png",
+        "selectedIconPath": "image/play.png"
+      },
+      {
+        "pagePath": "pages/shuffling-vadeo/shuffling-vadeo",
+        "text": "日志",
+        "iconPath": "image/stop.png",
+        "selectedIconPath": "image/play.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+/* pages/component/component.wxss */
+.following{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.following__list{
+  flex: 1;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.cuurent{
+  background-color: #FF7C3E;
+  color: #FFF;
+}
