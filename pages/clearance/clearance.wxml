@@ -1,2 +1,2 @@
 <view>测试</view>
-<footer></footer>
+<footer bindchooseTest="test" chooseCurrent="{{current}}"></footer>

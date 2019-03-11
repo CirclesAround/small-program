@@ -22,7 +22,7 @@ page{
 }
 .navbar__item:nth-child(3){
   flex: 1.2;
-  /* animation: rotateAvatar ease-in-out infinite 5s;  */
+  animation: rotateAvatar ease-in-out infinite 5s;   
   transform-style:preserve-3d;
   transform-origin: center; 
 }

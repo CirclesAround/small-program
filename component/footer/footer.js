@@ -1,19 +1,48 @@
+let app = getApp()
 Component({
-
+  properties: {
+    chooseCurrent: {
+      type: Number,
+      value: 0,
+      observer(e) {
+        console.log(e)
+        this.chooseActive(e)
+      }
+    }
+  },
   data: {
+    // tmpFooter: {},
     footer: [],
     current: 0
   },
   attached() {
-    this.setData({
-      footer: getApp().globalData.footer,
-      current: getApp().globalData.current
+    let that = this
+    wx.getStorage({
+      key: 'user',
+      success(res) {
+        app.globalData.footer[2].isImg = res.data.avatarUrl
+        that.setData({
+          footer: app.globalData.footer,
+          current: app.globalData.current
+        })
+      }
     })
   },
   methods: {
     changeNavbar: function (e) {
       this.setData({
-        current: e.currentTarget.dataset.index
+        currenr: e.currentTarget.dataset.index
+      })
+      let myEventOption = {
+        bubbles: false,
+        composed: false,
+        capturePhase: false
+      }
+      this.triggerEvent('chooseTest', this.data.current, myEventOption)
+    },
+    chooseActive: function(e){
+      this.setData({
+        current: e
       })
     }
   }

@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    current: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -15,9 +16,15 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function (opction) {
-    console.log(opction)
-    app.globalData.current = opction.current
+  test: function (e) {
+    this.setData({
+      current: e.detail
+    })
+  },
+  onLoad: function (options) {
+    this.setData({
+      current: options.current
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
