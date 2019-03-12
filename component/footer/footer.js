@@ -5,7 +5,6 @@ Component({
       type: Number,
       value: 0,
       observer(e) {
-        console.log(e)
         this.chooseActive(e)
       }
     }

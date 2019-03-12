@@ -15,23 +15,5 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#000",
-    "selectedColor": "red",
-    "list": [
-      {
-        "pagePath": "pages/selector/selector",
-        "text": "首页",
-        "iconPath": "image/stop.png",
-        "selectedIconPath": "image/play.png"
-      },
-      {
-        "pagePath": "pages/shuffling-vadeo/shuffling-vadeo",
-        "text": "日志",
-        "iconPath": "image/stop.png",
-        "selectedIconPath": "image/play.png"
-      }
-    ]
   }
 }

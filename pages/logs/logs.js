@@ -6,7 +6,7 @@ Page({
     logs: [],
     current: 0
   },
-  test: function (e) {
+  changeCurrent: function (e) {
     this.setData({
       current: e.detail
     })

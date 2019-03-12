@@ -4,3 +4,5 @@
 </view> -->
 <component test="{{active}}" bindginseng="change"></component>
 <text>{{obtain}}</text>
+<footer bindchooseTest="changeCurrent" chooseCurrent="{{current}}"></footer>
+

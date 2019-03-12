@@ -6,32 +6,35 @@ Page({
    */
   data: {
     obtain: '',
-    active: 0
+    active: 0,
+    current: 0
   },
   change: function (e) {
     this.setData({
       active: e.detail
     })
   },
+  changeCurrent: function (e) {
+    this.setData({
+      current: e.detail
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     let that = this
     wx.getStorage({
       key: 'testStorage',
       success: function(res) {
         that.setData({
           active: options.test,
-          obtain: res.data
+          obtain: res.data,
+          current: options.current
         })
       },
     })
-    // console.log(that.data.obtain)
-    // that.setData({
-    //   active: options.test,
-    //   obtain: that.data.obtain
-    // })
   },
 
   /**

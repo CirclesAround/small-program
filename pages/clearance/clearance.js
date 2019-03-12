@@ -2,12 +2,12 @@ Page({
   data: {
     current: 0
   },
-  test: function (e) {
+  changeCurrent: function (e) {
     this.setData({
       current: e.detail
     })
   },
   onLoad: function () {
-   
+  
   }
 })

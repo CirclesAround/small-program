@@ -23,4 +23,10 @@
 <slider bindchange="durationChange" show-value min="1000" max="10000" /> duration
 <button bindanimationfinish="animationChange">动画结束时发生的</button>
 
+
+<slider bindchange="intervalChange" show-value min="500" max="2000" /> interval
+<slider bindchange="durationChange" show-value min="1000" max="10000" /> duration
+<button bindanimationfinish="animationChange">动画结束时发生的</button>
+
 <navigator url="../fotter/fotter?test=0">跳转</navigator>
+<footer bindchooseTest="changeCurrent" chooseCurrent="{{current}}"></footer>

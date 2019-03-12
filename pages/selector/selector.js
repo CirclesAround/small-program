@@ -91,7 +91,13 @@ Page({
     marqueeDistance: 0, //初始滚动距离
     marquee_margin: 30,
     size: 14,
-    interval: 20 // 时间间隔
+    interval: 20, // 时间间隔
+    current: 0
+  },
+  changeCurrent: function (e) {
+    this.setData({
+      current: e.detail
+    })
   },
   radioChange: function(e) {
     console.log(e)
@@ -230,7 +236,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.setData({
+      current: options.current
+    })
   },
 
   /**

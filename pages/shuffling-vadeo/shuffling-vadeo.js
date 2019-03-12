@@ -20,6 +20,12 @@ Page({
     interval: 5000,//自动切换间隔时间
     duration: 1000,//滑动动画的时长
     circular: true,//是否采用衔接滑动
+    currrent: 0
+  },
+  changeCurrent: function (e) {
+    this.setData({
+      current: e.detail
+    })
   },
   play() {
     this.videoCtx.play()
@@ -63,7 +69,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      current: options.current
+    })
   },
 
   /**
