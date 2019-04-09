@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/clearance/clearance",
+    "pages/canvas/index",
+    
     "pages/index/index",
     "pages/selector/selector",
     "pages/test/test",
@@ -15,5 +17,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

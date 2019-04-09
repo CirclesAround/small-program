@@ -1,3 +1,4 @@
+const clearanceApi = require('clearanceApi.js')
 Page({
   data: {
     current: 0
@@ -8,6 +9,6 @@ Page({
     })
   },
   onLoad: function () {
-  
+   
   }
 })

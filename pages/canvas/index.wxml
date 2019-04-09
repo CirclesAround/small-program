@@ -1,0 +1,4 @@
+<!--pages/canvas/index.wxml-->
+<canvas canvas-id="firstCanvas"></canvas>
+<!-- <image src="{{imgSrc}}"></image> -->
+<button size="mini" bindtap="save">保存图片</button>
